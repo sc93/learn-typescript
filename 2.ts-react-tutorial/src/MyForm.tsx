@@ -4,7 +4,7 @@ type MyFormProps = {
     onSubmit : (form : { name : string; description : string})=>void
 }
 const MyForm = ({onSubmit} : MyFormProps) => {
-    const inputRef = useRef<HTMLInputElement>();
+    const inputRef = useRef<HTMLInputElement>(null);
     const [form,setForm ] = useState({
         name : "",
         description : ""
